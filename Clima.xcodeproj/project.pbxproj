@@ -16,6 +16,13 @@
 		ADAA27CE231BC87F00365194 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ADAA27CD231BC87F00365194 /* README.md */; };
 		D434B8A22739E4FD0019EECB /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434B8A12739E4FD0019EECB /* WeatherData.swift */; };
 		D434B8A42739EAA70019EECB /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D434B8A32739EAA70019EECB /* WeatherModel.swift */; };
+		D47B23B1273AFE7A00F40C5F /* Clouds.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D47B23B0273AFE3200F40C5F /* Clouds.mp4 */; };
+		D47B23B3273B022400F40C5F /* Rain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D47B23B2273B022400F40C5F /* Rain.mp4 */; };
+		D47B23B5273B023500F40C5F /* Snowfall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D47B23B4273B023500F40C5F /* Snowfall.mp4 */; };
+		D47B23B7273B025600F40C5F /* Autumn.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D47B23B6273B025600F40C5F /* Autumn.mp4 */; };
+		D47B23B9273B078E00F40C5F /* Drizzle.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D47B23B8273B078E00F40C5F /* Drizzle.mp4 */; };
+		D47B23BB273B07B900F40C5F /* Fog.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D47B23BA273B07B900F40C5F /* Fog.mp4 */; };
+		D47B23BD273B081400F40C5F /* Bolt.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D47B23BC273B081400F40C5F /* Bolt.mp4 */; };
 		E3B8914F27394E6F0054A66E /* WeatherManag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B8914E27394E6F0054A66E /* WeatherManag.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +38,13 @@
 		ADAA27CD231BC87F00365194 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D434B8A12739E4FD0019EECB /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		D434B8A32739EAA70019EECB /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		D47B23B0273AFE3200F40C5F /* Clouds.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Clouds.mp4; path = ../../../../Downloads/Clouds.mp4; sourceTree = "<group>"; };
+		D47B23B2273B022400F40C5F /* Rain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Rain.mp4; path = ../../../../Downloads/Rain.mp4; sourceTree = "<group>"; };
+		D47B23B4273B023500F40C5F /* Snowfall.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Snowfall.mp4; path = ../../../../Downloads/Snowfall.mp4; sourceTree = "<group>"; };
+		D47B23B6273B025600F40C5F /* Autumn.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Autumn.mp4; path = ../../../../Downloads/Autumn.mp4; sourceTree = "<group>"; };
+		D47B23B8273B078E00F40C5F /* Drizzle.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Drizzle.mp4; path = ../../../../Downloads/Drizzle.mp4; sourceTree = "<group>"; };
+		D47B23BA273B07B900F40C5F /* Fog.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Fog.mp4; path = ../../../../Downloads/Fog.mp4; sourceTree = "<group>"; };
+		D47B23BC273B081400F40C5F /* Bolt.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bolt.mp4; path = ../../../../Downloads/Bolt.mp4; sourceTree = "<group>"; };
 		E3B8914E27394E6F0054A66E /* WeatherManag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +87,13 @@
 				ADAA27B9231BBFB300365194 /* Assets.xcassets */,
 				ADAA27BB231BBFB300365194 /* LaunchScreen.storyboard */,
 				ADAA27BE231BBFB300365194 /* Info.plist */,
+				D47B23B0273AFE3200F40C5F /* Clouds.mp4 */,
+				D47B23B4273B023500F40C5F /* Snowfall.mp4 */,
+				D47B23B2273B022400F40C5F /* Rain.mp4 */,
+				D47B23B6273B025600F40C5F /* Autumn.mp4 */,
+				D47B23B8273B078E00F40C5F /* Drizzle.mp4 */,
+				D47B23BA273B07B900F40C5F /* Fog.mp4 */,
+				D47B23BC273B081400F40C5F /* Bolt.mp4 */,
 			);
 			path = Clima;
 			sourceTree = "<group>";
@@ -161,10 +182,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47B23BB273B07B900F40C5F /* Fog.mp4 in Resources */,
+				D47B23B5273B023500F40C5F /* Snowfall.mp4 in Resources */,
 				ADAA27CE231BC87F00365194 /* README.md in Resources */,
 				ADAA27BD231BBFB300365194 /* LaunchScreen.storyboard in Resources */,
+				D47B23B7273B025600F40C5F /* Autumn.mp4 in Resources */,
+				D47B23B1273AFE7A00F40C5F /* Clouds.mp4 in Resources */,
 				ADAA27BA231BBFB300365194 /* Assets.xcassets in Resources */,
 				ADAA27B8231BBFAF00365194 /* Main.storyboard in Resources */,
+				D47B23B3273B022400F40C5F /* Rain.mp4 in Resources */,
+				D47B23B9273B078E00F40C5F /* Drizzle.mp4 in Resources */,
+				D47B23BD273B081400F40C5F /* Bolt.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

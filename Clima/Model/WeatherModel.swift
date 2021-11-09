@@ -37,5 +37,7 @@ struct WeatherModel {
                     return "cloud"
                 }
     }
+    
+
 
 }
