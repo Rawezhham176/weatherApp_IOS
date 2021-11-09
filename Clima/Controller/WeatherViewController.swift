@@ -21,7 +21,11 @@ class WeatherViewController: UIViewController {
 
     var weatherManager = WeatherManag()
     let locationManager = CLLocationManager()
-    var video: String = "Clouds";
+    var playerLayer = AVPlayerLayer()
+    var video: String = "Clouds"
+    var iconName: String!
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +50,6 @@ class WeatherViewController: UIViewController {
 extension WeatherViewController: UITextFieldDelegate{
     @IBAction func searchPressed(_ sender: UIButton) {
         print(searchtextfiled.text!)
-        print("video: \(String(describing: self.video))")
     }
 
 
@@ -86,7 +89,7 @@ extension WeatherViewController: WeatherManagerDelagate{
             self.temperatureLabel.text = weather.temperatureString
             self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.cityLabel.text = weather.cityName
-            self.video = weather.conditionName
+            self.iconName = weather.conditionName
         }
     }
 
@@ -114,19 +117,22 @@ extension WeatherViewController: CLLocationManagerDelegate {
 
 //MARK: - PlayVideo
 extension WeatherViewController {
-    
+        
     func playVideo() {
-        guard let path = Bundle.main.path(forResource: self.video , ofType: "mp4") else {
+        
+        guard let path = Bundle.main.path(forResource: videoResult, ofType: "mp4") else {
               return
           }
           
           let player = AVPlayer(url: URL(fileURLWithPath: path))
-          let playerLayer = AVPlayerLayer(player: player)
+          playerLayer = AVPlayerLayer(player: player)
           player.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
           playerLayer.frame = self.view.bounds
           playerLayer.videoGravity = .resizeAspectFill
         
-        
+        player.actionAtItemEnd = .none
+                NotificationCenter.default.addObserver(self, selector: #selector(rewindVideo(notification:)), name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+                
         self.videoLayer.layer.addSublayer(playerLayer)
         
         player.play()
@@ -138,28 +144,33 @@ extension WeatherViewController {
           
       }
     
-    func videoResult() -> String{
-        var video : String {
-            switch self.video {
-            case "cloud.bolt":
-                return "Bolt"
-            case "cloud.drizzle":
-                return "Drizzle"
-            case  "cloud.rain":
-                return "Rain"
-            case "cloud.snow":
-                return "Snowfall"
-            case "cloud.fog":
-                return "Fog"
-            case "sun.max":
-                return "Clouds"
-            case "cloud.bolt":
-                return "Bolt"
-            default:
-                return "Clouds"
+    // to 
+    @objc
+       func rewindVideo(notification: Notification) {
+           playerLayer.player?.seek(to: .zero)
+       }
+    
+    
+    
+    // chose the right video background according to the weather icon
+        var videoResult : String {
+            switch self.iconName {
+                    case "cloud.bolt":
+                        return "Bolt"
+                    case "cloud.drizzle":
+                        return "Drizzle"
+                    case "cloud.rain":
+                        return "Rain"
+                    case "cloud.snow":
+                        return "Snowfall"
+                    case "cloud.fog":
+                        return "Fog"
+                    case "sun.max":
+                        return "Clouds"
+                    default:
+                        return "Clouds"
                     }
         }
-        return ""
-    }
+    
     
 }
