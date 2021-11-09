@@ -1,3 +1,3 @@
 #  Clima
 
-![alt text](Clima/Assets.xcassets/AppIcon.appiconset/1024.png)
+![alt text](Clima/Assets.xcassets/AppIcon.appiconset/100.png)
