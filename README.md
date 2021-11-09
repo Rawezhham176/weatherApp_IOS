@@ -1,3 +1,3 @@
 #  Clima
 
-![alt text](http://url/to/img.png)
+![alt text](Clima/Assets.xcassets/AppIcon.appiconset/1024.png)
